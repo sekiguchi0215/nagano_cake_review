@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   namespace :admin do
+    get 'homes/top'
+    get 'homes/search'
+  end
+  namespace :admin do
     get 'genres/index'
     get 'genres/edit'
   end
