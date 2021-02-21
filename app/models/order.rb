@@ -45,5 +45,6 @@ class Order < ApplicationRecord
 
 	def are_all_details_completed?
 		(order_details.completed.count == order_details.count) ? true : false
+		# 完成個数と注文個数が同じ
 	end
 end
