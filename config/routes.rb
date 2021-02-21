@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   namespace :admin do
+    get 'items/new'
+    get 'items/index'
+    get 'items/show'
+    get 'items/edit'
+  end
+  namespace :admin do
     get 'homes/top'
     get 'homes/search'
   end
