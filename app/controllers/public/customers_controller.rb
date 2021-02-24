@@ -19,7 +19,7 @@ class Public::CustomersController < ApplicationController
   	def unsubscribe # 「登録」(subscribe)という単語の否定。
   	end
 
-  	def withdraw # 「取り下げる」や「撤退」という意味。
+  	def withdraw # 「取り下げる」や「撤退」という意味。つまりは、登録解除のこと。
   		@customer.update(is_active: false)
   		reset_session # すべてのセッション情報を削除する。
   		redirect_to root_path
