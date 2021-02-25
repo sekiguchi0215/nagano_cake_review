@@ -14,6 +14,7 @@ class Public::OrdersController < ApplicationController
   			@selected_address = current_customer.addresses.find(params[:address_id])
   			@order.get_shipping_informations_from(@selected_address)
   		elsif params[:selected_address] == "2" && (@order.postal_code =~ /\A\d{7}\z/) && @order.destination? && @order.name?
+  			# "=~"は正規表現とのマッチを行う。
   			# 処理なし
   		else
   			flash[:error] = "情報を正しく入力してください。"
