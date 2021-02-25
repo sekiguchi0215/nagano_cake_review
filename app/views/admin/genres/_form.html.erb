@@ -1,4 +1,4 @@
-<%= form_for(genre, url: url) do |f| %>
+<%= form_for(genre, url: url) do |f| %> <!-- "genre", "url"はそれぞれローカル変数 -->
 	<%= render "layouts/error_messages", resource: genre %>
 	<%= f.label :name, "ジャンル名：" %>
 	<%= f.text_field :name %>
@@ -6,5 +6,5 @@
 	<%= f.label :is_active, "有効", class: "text-active" %>
 	<%= f.radio_button :is_active, false %>
 	<%= f.label :is_active, "無効", class: "text-invalid" %>
-	<%= f.submit submit, class: "btn btn-primary ml2" %>
+	<%= f.submit submit, class: "btn btn-primary ml2" %> <!-- "submit"はローカル変数 -->
 <% end %>
