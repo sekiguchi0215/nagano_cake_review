@@ -1,2 +1,12 @@
-<h1>Admin::Homes#search</h1>
-<p>Find me in app/views/admin/homes/search.html.erb</p>
+<section class="inner">
+	<h2 class="section-ttl">検索結果</h2>
+	<% if @result.first %> <!-- @result.exists?と同義。 -->
+		<% if @model == "customer" %>
+			<%= render "admin/customers/index", customers: @result %>
+		<% else %>
+			<%= render "admin/items/index", items: @result %>
+		<% end %>
+	<% else %>
+		<h3>見つかりませんでした。検索条件を変更して再度お試しください。</h3>
+	<% end %>
+</section>
