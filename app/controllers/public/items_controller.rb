@@ -20,5 +20,5 @@ class Public::ItemsController < ApplicationController
 		@item = Item.wnere_genre_active.find(params[:id])
 		@genres = Genre.only_active
 		@cart_item = CartItem.new
-	end  
+	end
 end
