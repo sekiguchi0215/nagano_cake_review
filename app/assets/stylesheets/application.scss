@@ -1,0 +1,316 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+#error_explanation {
+	color: red;
+	padding-bottom: 20px;
+	h2 {
+		font-size: 20px;
+		font-weight: bold;
+		/* "font-weight"プロパティはフォントの太さを指定するプロパティ。
+			"bold"を指定すると、フォントが太字になる。
+		*/
+	}
+	ul {
+		padding-left: 50px;
+		list-style: circle;
+	}
+}
+
+.field_with_errors {
+	display: inline-block;
+	input,
+	textarea {
+		border: 1px solid red;
+	}
+}
+
+.text-invalid {
+	color: #bbb;
+}
+
+.text-active {
+	font-weight: bold;
+	color: #0a0;
+}
+
+h3 {
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-weight: 500;
+}
+input,
+textarea,
+select {
+	padding: 8px;
+}
+
+.jpostal_address {
+	width: 480px;
+}
+
+header {
+	width: 100vw;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	background-color: #faa;
+	* {
+		position: reletive;
+		z-index: 100;
+	}
+	.header-content {
+		display: flex;
+		justify-content: space-between;
+		width: 960px;
+		margin: 0 auto;
+		.logo {
+			padding: 10px 20px;
+			font-family: "Century";
+			font-size: 20px;
+			text-decoration: none;
+		}
+		ul {
+			justify-content: flex-end;
+			p {
+				padding: 10px 20px 10px 10px;
+			}
+			li {
+				list-style: none;
+				a {
+					display: block;
+					width: 110px;
+					padding: 10px;
+					text-align: center;
+					text-decoration: none;
+					color: #333;
+				}
+			}
+			li:hover {
+				background-color: #fcc;
+				a {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.admin_header {
+	background-color: #aaf;
+	.header-content {
+		ul {
+			li:hover {
+				background-color: #ccf;
+			}
+		}
+		form {
+			width: 510px;
+			position: abusolute;
+			top: 43px;
+			right: 0;
+			display: flex;
+			justify-content: space-between;
+			input[name="search[content]"] {
+				width: 280px;
+			}
+		}
+	}
+}
+
+main {
+	padding: 100px 0;
+}
+
+footer {
+	padding: 15px 0;
+	font-size: 14px;
+	text-align: center;
+	background-color: #ddd;
+}
+
+th {
+	border-style: solid;
+	border-color: #aaa;
+	background-color: #ddd;
+}
+
+td {
+	padding: 10px;
+	border-style: solid;
+	border-color: #aaa;
+}
+
+table.has_border {
+	width: 100px;
+	thead {
+		th {
+			border-width: 1px 1px 0;
+		}
+	}
+	tbody {
+		tr {
+			td {
+				vertical-align: middle;
+				border-width: 1px 1px 0;
+			}
+		}
+		tr:last-child {
+			td {
+				border-width: 1px;
+			}
+		}
+	}
+}
+
+table.customer_info {
+	width: 100%;
+	thead {
+		th:first-child {
+			width: 30%;
+		}
+		th.last-child {
+			width: 35%;
+		}
+	}
+}
+
+table.customer_info.customer_form {
+	tbody {
+		tr:nth-child(n+3) {
+			td:nth-child(2) {
+				padding-left: 55px;
+			}
+		}
+	}
+}
+
+label.customer_info.customer_form {
+	tbody {
+		tr:nth-child(n+3) {
+			td:nth-child(2) {
+				padding-left: 55px;
+			}
+		}
+	}
+}
+
+label.customer_name {
+	display: inline-block;
+	padding-right: 14px;
+}
+
+.field_for_address input {
+	width: 460px;
+}
+
+table.admin_customer_index {
+	thead {
+		tr {
+			th {
+				width: 280px;
+			}
+			th:first-child {
+				width: 60px;
+			}
+			th:nth-child(n+4) {
+				width: 110px;
+			}
+		}
+	}
+	tbody {
+		tr {
+			td {
+				text-align: center;
+			}
+		}
+	}
+}
+
+.image_field {
+	width: 220px;
+	text-align: center;
+	p {
+		margin-top: 10px;
+		text-align: left;
+	}
+}
+
+.admin_item_image {
+	width: 220px;
+	height: 150px;
+
+	object-fit: cover;
+	 /* "object-fit"プロパティは<img>や<video>などの中身を、コンテナーにどのように嵌め込むか設定する。
+	 	"cover"を指定すると、アスペクト比を維持したまま、要素のコンテンツボックスに収まるように拡大縮小される。
+	 	オブジェクトのアスペクト比がボックスのアスペクト比と合わない場合は、オブジェクトの方が合うように切り取られる。
+	 	参考（https://developer.mozilla.org/ja/docs/Web/CSS/object-fit）
+	  */
+}
+
+.item_image {
+	display: block;
+	width: 360px;
+	height: 240px;
+
+	object-fit: cover;
+}
+
+.btn-file {
+	overflow: hidden;
+	position: relative;
+	input[type=file] {
+		display: block;
+		min-width: 100%;
+		min-height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 100px;
+		text-align: right;
+		cursor: inherit;
+		/* "inherit"、この値はあらゆるプロパティに指定でき、通常では継承しない親要素のプロパティを強制的に継承させることができる。 */
+		background: red;
+		opacity: 0;
+
+		filter: alpha(opacity=0);
+		/* "filter"プロパティは、ぼかしや色変化などのグラフィック効果を要素に適応する。画像、背景、境界の描画を調整するためによく使われる。
+			参考（https://developer.mozilla.org/ja/docs/Web/CSS/filter）
+			"alpha(***)"は、半透明のグラデーションをかけるフィルタで、グラデーションの色や透明度、、方向などを指定できる。
+			参考（https://www.tagindex.com/stylesheet/filter/alpha.html）
+		*/
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
