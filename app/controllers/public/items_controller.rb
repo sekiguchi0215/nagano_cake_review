@@ -1,6 +1,6 @@
 class Public::ItemsController < ApplicationController
 	def top
-		@genre = Genre.only_active.includes(:items)
+		@genres = Genre.only_active.includes(:items)
 		@items = Item.recommended
 	end
 
