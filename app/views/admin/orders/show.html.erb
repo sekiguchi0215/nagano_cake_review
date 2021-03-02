@@ -63,6 +63,9 @@
 						<td>
 							<%= form_with(model: order_detail, url: admin_order_order_detail_path(order_id: @order.id, id: order_detail.id)) do |f| %>
 								<%= f.select :making_status, OrderDetail.making_statuses.keys.map {|k| [I18n.t("enums.order_detail.making_status.#{k}"), k]} %>
+								<!-- "kyes"メソッドは、ハッシュオブジェクトからキーを取り出すメソッド。
+									 "mapメソッド"は、配列要素ひとつひとつに処理を加え、新たな配列オブジェクトを作り出すことができる。
+								 -->
 								<%= f.submit "更新", class: "btn btn-primary" %>
 							<% end %>
 						</td>
