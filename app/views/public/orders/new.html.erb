@@ -24,6 +24,7 @@
 		<div class="field mb2 select_address_1">
 			<label class="fz16"><%= radio_button_tag :select_address, 1 %>登録住所から選択</label>
 			<%= select_tag "address_id", options_form_collection_for_select(current_customer.address, :id, :finally_address), prompt: "住所を選択してください" %>
+			<!-- "options_form_collection_for_select( コレクション, [optionタグのvalueとなる値])"を用いると、プルダウンリストを生成できる。 -->
 
 		</div>
 		<div class="field mb2 select_address_2">

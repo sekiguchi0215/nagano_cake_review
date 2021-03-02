@@ -63,14 +63,14 @@ Address.create!(
 		},
 
 		{
-			customer_id: 1,
+			customer_id: 2,
 			name: "石上千空",
 			postal_code: "3062017",
 			destination: "石神村"
 		},
 
 		{
-			customer_id: 1,
+			customer_id: 2,
 			name: "竈門炭治郎",
 			postal_code: "2152016",
 			destination: "鬼殺隊本部"
@@ -138,3 +138,4 @@ for i in 1..10 do
 			}
 		]
 	)
+end
